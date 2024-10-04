@@ -16,7 +16,6 @@ export class Song {
   @ManyToOne(() => Album, (album) => album.songs, { onDelete: 'CASCADE' })
   album: Album;
 
-
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   created_at: Date;
 }
